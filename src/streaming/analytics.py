@@ -18,5 +18,4 @@ class CrimeAnalytics:
             .withColumn("risk_level", 
                 when(col("crime_count") >= 2, "🔴 HIGH")
                 .when(col("crime_count") == 1, "🟡 MEDIUM")
-                .otherwise("🟢 LOW")) \
-            .orderBy(desc("crime_count"))
+                .otherwise("🟢 LOW"))
